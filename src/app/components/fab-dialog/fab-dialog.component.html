@@ -1,0 +1,27 @@
+<div mat-dialog-content>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>{{data.label}}</mat-label>
+      <textarea
+        name="input"
+        type="text"
+        [(ngModel)]="inputValue"
+        cdkFocusInitial
+        matInputAutofocus
+        matInput
+        placeholder="{{data.dialogPlaceholder}}"
+      ></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">{{data.cancelBtnText}}</button>
+  <button
+    mat-button
+    [mat-dialog-close]="data"
+    cdkFocusInitial
+    (click)="onOk(inputValue)"
+  >
+    {{data.confirmBtnText}}
+  </button>
+</div>

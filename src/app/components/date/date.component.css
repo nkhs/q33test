@@ -1,0 +1,22 @@
+.date-wrapper {
+  display: grid;
+  grid-template-areas: "dateOfDay monthAndYear";
+  grid-template-columns: 60px;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: 100;
+  font-size: 18px;
+  padding: 0px;
+  text-align: left;
+}
+
+.month-and-year {
+  grid-area: monthAndYear;
+}
+
+.date-of-day {
+  grid-area: dateOfDay;
+  font-size: 48px;
+  font-weight: 800;
+}

@@ -1,0 +1,19 @@
+<div class="todo-wrapper">
+  <div class="header-wrapper">
+    <div class="date-wrapper">
+      <date></date>
+    </div>
+  </div>
+
+  <div class="list-wrapper">
+    <list
+      [items]="store.getTodos | async"
+      (deletionEmitter)="onDelete($event)"
+      (editEmitter)="onEdit($event)"
+      (completionEmitter)="onComplete($event)"
+    >
+    </list>
+  </div>
+
+  <fab (fabEmitter)="openDialog()"></fab>
+</div>

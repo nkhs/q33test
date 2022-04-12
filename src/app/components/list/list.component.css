@@ -1,0 +1,55 @@
+.list-wrapper {
+  height: 100%;
+  overflow: scroll;
+}
+
+mat-card {
+  margin: 5px;
+  color: rgb(0, 0, 0, 0.75);
+  border: 1px solid black;
+}
+
+mat-icon {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.card .item {
+  width: 100%;
+  justify-content: space-between;
+  display: grid;
+  grid-template-areas: "completion-icon item-text edit-tools";
+}
+
+.item-text {
+  grid-area: "item-text";
+}
+
+.completion-icon {
+  grid-area: "completion-icon";
+}
+
+.completed-icon {
+  opacity: 1;
+  color: rgb(4, 116, 4);
+}
+
+.completed-card {
+  border-left: 15px solid rgb(4, 116, 4);
+}
+
+.incomplete-card {
+  border-left: 15px solid rgb(231, 111, 81);
+}
+
+.completed-text {
+  text-decoration: line-through;
+}
+
+.edit-tools {
+  grid-area: "edit-tools";
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

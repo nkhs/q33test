@@ -1,0 +1,35 @@
+.todo-wrapper {
+  display: grid;
+  height: calc(100vh - 50px);
+  text-align: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 70% 20%;
+  grid-gap: 20px;
+  grid-template-areas:
+    "headerWrapper"
+    "listWrapper"
+    "fab";
+}
+
+.header-wrapper {
+  grid-area: headerWrapper;
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  z-index: 1;
+}
+
+.date-wrapper {
+  margin: 0 auto;
+  padding: 0px;
+  width: calc(100vw - 25%);
+}
+
+.list-wrapper {
+  grid-area: listWrapper;
+  margin: 0 auto;
+  width: calc(100vw - 25%);
+}
+
+fab {
+  grid-area: fab;
+}

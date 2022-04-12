@@ -1,0 +1,44 @@
+<div class="list-wrapper">
+  <ng-container *ngFor="let item of items">
+    <mat-card
+      class="card"
+      [ngClass]="{'completed-card': item.complete, 'incomplete-card': !item.complete }"
+    >
+      <mat-card-content class="item">
+        <mat-icon
+          [ngClass]="{'completed-icon': item.complete}"
+          class="completion-icon"
+          aria-hidden="false"
+          aria-label="mark complete"
+          (click)="emitCompletion(item)"
+        >
+          check_circle_outline
+        </mat-icon>
+
+        <span class="item-text" [ngClass]="{'completed-text': item.complete}"
+          >{{item.text}}</span
+        >
+
+        <span class="edit-tools">
+          <mat-icon
+            class="deletion-icon"
+            aria-hidden="false"
+            aria-label="delete todo"
+            (click)="emitDeletion(item)"
+          >
+            remove_circle_outline
+          </mat-icon>
+
+          <mat-icon
+            class="edit-icon"
+            aria-hidden="false"
+            aria-label="edit todo"
+            (click)="emitEdit(item)"
+          >
+            edit
+          </mat-icon>
+        </span>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
